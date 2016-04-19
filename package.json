@@ -1,0 +1,37 @@
+{
+  "name": "expiring-redux-messages",
+  "version": "0.1.0",
+  "description": "create messages that will remove themselves",
+  "main": "index.js",
+  "scripts": {
+    "prebuild": "if not exist \"lib\" mkdir lib",
+    "build": "babel ./src -d lib",
+    "test": "mocha tests --compilers js:babel-core/register --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/pshrmn/expiring-redux-messages.git"
+  },
+  "keywords": [
+    "redux",
+    "message",
+    "expire"
+  ],
+  "author": "Paul Sherman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pshrmn/expiring-redux-messages/issues"
+  },
+  "homepage": "https://github.com/pshrmn/expiring-redux-messages#readme",
+  "devDependencies": {
+    "babel-cli": "^6.7.5",
+    "babel-core": "^6.7.6",
+    "babel-preset-es2015": "^6.6.0",
+    "babel-preset-stage-0": "^6.5.0",
+    "chai": "^3.5.0",
+    "mocha": "^2.4.5",
+    "redux": "^3.4.0",
+    "redux-mock-store": "^1.0.2"
+  },
+  "dependencies": {}
+}
