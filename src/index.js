@@ -1,5 +1,4 @@
 export {
-  SHOW_MESSAGE,
   ADD_MESSAGE,
   REMOVE_MESSAGE
 } from './types';
