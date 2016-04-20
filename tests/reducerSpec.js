@@ -23,15 +23,18 @@ describe('messages reducer', () => {
       const state = [];
       const msg = 'test message';
       const id = 7;
+      const rating = 17;
       const newState = messages(state, {
         type: types.ADD_MESSAGE,
         message: msg,
-        id: id
+        id: id,
+        rating: rating
       });
       expect(newState.length).to.equal(1);
       const first = newState[0];
       expect(first.id).to.equal(id);
       expect(first.message).to.equal(msg);
+      expect(first.rating).to.equal(rating);
     });
   });
 

@@ -15,7 +15,8 @@ export default function messages(state = [], action) {
     return state.concat([
       {
         id: action.id,
-        message: action.message
+        message: action.message,
+        rating: action.rating
       }
     ]);
   case REMOVE_MESSAGE:

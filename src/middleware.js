@@ -12,7 +12,7 @@ export default store => next => action => {
   if ( action.type !== SHOW_MESSAGE ) {
     return next(action);
   }
-  const { message, lifetime } = action;
+  const { message, lifetime, rating } = action;
   const id = pseudoRandomID();
  
   setTimeout(() => {
@@ -22,6 +22,6 @@ export default store => next => action => {
   }, lifetime);
 
   return store.dispatch(
-    addMessage(message, id)
+    addMessage(message, id, rating)
   );
 }

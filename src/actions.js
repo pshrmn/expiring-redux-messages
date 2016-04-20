@@ -4,19 +4,21 @@ import {
   REMOVE_MESSAGE
 } from './types';
 
-export function showMessage(message, lifetime) {
+export function showMessage(message, lifetime, rating = 0) {
   return {
     type: SHOW_MESSAGE,
     message,
-    lifetime
+    lifetime,
+    rating
   };
 }
 
-export function addMessage(message, id) {
+export function addMessage(message, id, rating = 0) {
   return {
     type: ADD_MESSAGE,
     message,
-    id
+    id,
+    rating
   };
 }
 

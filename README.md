@@ -29,7 +29,7 @@ const store = createStore(
 const message = 'I am a temporary message';
 // dispatch a sendMessage action with a 10 second lifetime
 store.dispatch(
-  sendMessage(message, 10000)
+  sendMessage(message, 10000, 1)
 );
 
 let currentMessages = store.getState().messages;
@@ -50,3 +50,11 @@ currentMessages = store.getState().messages;
 currentMessages = store.getState().messages;
 // currentMessages === []
 ```
+
+##`sendMessage`
+
+`sendMessage` takes three arguments:
+
+1. message (string) - the message that should be displayed
+2. lifetime (int) - the number of milliseconds that the message should last for
+3. rating (int) - the rating of the message. While not required, a good way to think about the rating is to coincide it with its sign. A rating that is less than 0 is negative, a rating that is greater than 0 is positive, and a rating of 0 is neutral. If you do not provide a rating, it will default to 0.
